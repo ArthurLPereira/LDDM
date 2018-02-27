@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="br.pucminas.arthur.lddm.nothing.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="?attr/colorPrimary">
+        <ImageButton
+            android:id="@+id/flag_uk"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/ic_flag_of_the_united_kingdom"
+            android:layout_margin="20dp"
+            android:adjustViewBounds="true" />
+        <ImageButton
+            android:id="@+id/flag_espana"
+            android:src="@drawable/ic_flag_of_spain"
+            android:layout_width="128dp"
+            android:layout_height="85dp"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"/>
+        <ImageButton
+            android:id="@+id/flag_italia"
+            android:src="@drawable/ic_flag_of_italy"
+            android:layout_width="128dp"
+            android:layout_height="85dp"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="20dp"/>
+        <ImageButton
+            android:id="@+id/flag_portugal"
+            android:src="@drawable/ic_flag_of_portugal"
+            android:layout_width="128dp"
+            android:layout_height="85dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="20dp"/>
+        <TextView
+            android:id="@+id/nothing"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="Nothing"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
