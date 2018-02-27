@@ -1,8 +1,8 @@
-# LDDM
+## LDDM
 Trabalhos praticos para a matéria Laboratório de Desenvolvimento de Dispositivos Móveis
 
-#Curso
+# Curso
 Ciência da Computação - PUC Minas
 
-#Set Up
+# Set Up
 São projetos android, clone e importe os projetos no Android Studio
