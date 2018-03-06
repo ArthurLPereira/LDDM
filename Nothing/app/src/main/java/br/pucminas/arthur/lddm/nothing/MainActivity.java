@@ -28,16 +28,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.flag_espana:
-                text.setText("Nada");
+                text.setText(R.string.nothing_espanol);
                 break;
             case R.id.flag_italia:
-                text.setText("Niente");
+                text.setText(R.string.nothing_italiano);
                 break;
             case R.id.flag_portugal:
-                text.setText("Nada");
+                text.setText(R.string.nothing_portugues);
                 break;
             case R.id.flag_uk:
-                text.setText("Nothing");
+                text.setText(R.string.nothing_english);
         }
 
     }

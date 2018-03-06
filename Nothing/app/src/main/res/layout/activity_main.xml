@@ -9,7 +9,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="?attr/colorPrimary">
+        android:background="#E5E7FF">
         <ImageButton
             android:id="@+id/flag_uk"
             android:layout_width="128dp"
@@ -34,7 +34,7 @@
             android:layout_margin="20dp"/>
         <ImageButton
             android:id="@+id/flag_portugal"
-            android:src="@drawable/ic_flag_of_portugal"
+            android:src="@drawable/flag_brasil"
             android:layout_width="128dp"
             android:layout_height="85dp"
             android:layout_alignParentBottom="true"
@@ -44,7 +44,7 @@
             android:id="@+id/nothing"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:text="Nothing"
+            android:text="@string/nothing_english"
             android:layout_centerInParent="true"/>
     </RelativeLayout>
 
