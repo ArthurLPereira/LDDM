@@ -5,4 +5,7 @@ Trabalhos praticos para a matéria Laboratório de Desenvolvimento de Dispositiv
 Ciência da Computação - PUC Minas
 
 ### Set Up
-São projetos android, clone e importe os projetos no Android Studio
+São projetos android, 
+- clone o repositório;
+- importe os projetos no Android Studio;
+- you're good to go!
