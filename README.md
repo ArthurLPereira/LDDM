@@ -1,5 +1,5 @@
 # LDDM
-Trabalhos praticos para a matéria Laboratório de Desenvolvimento de Dispositivos Móveis
+Trabalhos Práticos para a matéria Laboratório de Desenvolvimento de Dispositivos Móveis
 
 ### Curso
 Ciência da Computação - PUC Minas
