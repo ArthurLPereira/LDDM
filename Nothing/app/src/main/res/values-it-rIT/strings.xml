@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Nothing</string>
+    <string name="nothing">Niente</string>
+    <string name="last_seen">Ultima visualizzazione:  fa %1$2d:%2$2d (%3$s)</string>
+</resources>
