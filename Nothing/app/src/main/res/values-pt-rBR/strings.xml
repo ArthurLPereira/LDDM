@@ -2,5 +2,7 @@
 <resources>
     <string name="app_name">Nothing</string>
     <string name="nothing">Nada</string>
-    <string name="last_seen">Visto por último: há  %1$2d:%2$2d (%3$s)</string>
+    <string name="last_seen">Voltou! Uma breve pausa de: %1$2d:%2$2d</string>
+    <string name="first_access">primeiro acesso: %s</string>
+    <string name="last_seen2">Ufa! Achei que iria embora! Que Pausa de: %1$d:%2$2d</string>
 </resources>

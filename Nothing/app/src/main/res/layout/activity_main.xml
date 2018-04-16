@@ -48,10 +48,19 @@
             android:layout_centerInParent="true"
             android:layout_marginBottom="20dp"/>
         <TextView
-            android:id="@+id/last_seen"
+            android:id="@+id/first_access"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_below="@+id/nothing"
+            android:text="@string/first_access"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/last_seen"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/first_access"
             android:text="@string/last_seen"
             android:layout_centerHorizontal="true"
             android:visibility="gone"/>
