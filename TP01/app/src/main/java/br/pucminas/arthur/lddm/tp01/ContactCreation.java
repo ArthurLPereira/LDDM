@@ -23,6 +23,7 @@ import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.ContextThemeWrapper;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.CalendarView;
 import android.widget.DatePicker;
 import android.widget.EditText;
@@ -84,7 +85,6 @@ public class ContactCreation extends AppCompatActivity implements View.OnClickLi
         setContentView(R.layout.activity_contact_creation);
         linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        recyclerView.setLayoutManager(linearLayoutManager);
     }
 
 
@@ -116,11 +116,19 @@ public class ContactCreation extends AppCompatActivity implements View.OnClickLi
             intent.putExtra(ContactsContract.Intents.Insert.NAME, contato.getName());
             intent.putExtra(ContactsContract.Intents.Insert.PHONE, contato.getPhone());
             intent.putExtra(ContactsContract.Intents.Insert.EMAIL, contato.getEmail());
-
+            if(preferences.size()>0) intent.putExtra(ContactsContract.Intents.Insert.NOTES, getNotes());
             startActivityForResult(intent, 0);
         }
     }
 
+
+    private String getNotes(){
+        String resp = "";
+        for(MyLink link : preferences){
+            resp = resp + link.title+ ": "+link.url+", \n";
+        }
+        return resp;
+    }
     public void createEvent() {
 
         Date date = new Date(year-1900, month, day);
@@ -187,27 +195,27 @@ public class ContactCreation extends AppCompatActivity implements View.OnClickLi
     }
 
     private void newLink(){
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
-        linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
+
 
         final EditText txtUrl = new EditText(this);
         final EditText title = new EditText(this);
 
 // Set the default text to a link of the Queen
         title.setHint("Titulo");
-        txtUrl.setHint("http;//www.example.com");
-
+        txtUrl.setHint("http://www.example.com");
         LinearLayout layout = new LinearLayout(new ContextThemeWrapper(this, R.style.Theme_AppCompat_Light_Dialog));
         layout.setOrientation(LinearLayout.VERTICAL);
         layout.addView(title);
         layout.addView(txtUrl);
-
         new AlertDialog.Builder(new ContextThemeWrapper(this, R.style.Theme_AppCompat_Light_Dialog))
                 .setTitle("New Link")
                 .setView(layout)
                 .setPositiveButton("Salvar", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int whichButton) {
                         preferences.add(new MyLink(title.getText().toString(), txtUrl.getText().toString()));
+                        recyclerView.setLayoutManager(new LinearLayoutManager(getParent()));
+                        recyclerView.setAdapter(new RecyclerViewAdapter(preferences));
+                        recyclerView.setVisibility(View.VISIBLE);
                     }
                 })
                 .setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
@@ -215,10 +223,8 @@ public class ContactCreation extends AppCompatActivity implements View.OnClickLi
                     }
                 })
                 .show();
-        if(preferences.size() > 0) {
-            recyclerView.setLayoutManager(linearLayoutManager);
-            recyclerView.setAdapter(new RecyclerViewAdapter(preferences));
-        }
+        Log.i("size", Integer.toString(preferences.size()));
+
 
     }
 }
